@@ -4,7 +4,7 @@
 
 # Nice weather !
 
-
+Jag lär mig SQL här i det här repot
 
 
 
