@@ -1,4 +1,11 @@
 SELECT
+	count(*)
+from
+	main.data_jobs;
+
+
+
+SELECT
 	MIN(salary_in_usd) as min_salary_usd, 
 	round(AVG(salary_in_usd)) as mean_salary_usd,
 	median(salary_in_usd) as median_salary_usd,
