@@ -1,13 +1,22 @@
 SELECT * from main.data_jobs dj;      -- dj 是别名 
 
+
+SELECT
+	*
+from
+	main.data_jobs dj
+WHERE
+	salary_in_usd < 50000; 
+
+
 SELECT
 	COUNT(*)
 from
 	main.data_jobs dj
 WHERE
-	salary_in_usd < 500000; 
+	salary_in_usd < 50000; 
 
-
+-- filtering salary_in_usd lower than 50k
 SELECT
 	COUNT(*) as job_lower_than_50k
 from
@@ -15,6 +24,12 @@ from
 WHERE
 	salary_in_usd < 50000; 
 
+
+-- focus on experience_level
+SELECT
+	DISTINCT experience_level
+from
+	main.data_jobs dj;
 
 SELECT
 	*
