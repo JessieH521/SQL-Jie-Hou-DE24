@@ -1,7 +1,16 @@
+-- DML  Data Manipulation Language
+
+
+SELECT * FROM database.duckdb WHERE  id IN (5, 8);
+
+SELECT * FROM database.duckdb WHERE  word IN ('TIMESTAMPTZ', 'DROP SCHEMA');
+
+
+
 SELECT
 	*
 from
-	programming.python p
+	programming.python
 where
 	id = 2;
 

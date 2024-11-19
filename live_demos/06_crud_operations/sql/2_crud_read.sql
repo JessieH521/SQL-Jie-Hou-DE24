@@ -1,3 +1,6 @@
+
+-- DQL
+
 SELECT * from database.sql s ;
 
 SELECT * from programming.python p ;

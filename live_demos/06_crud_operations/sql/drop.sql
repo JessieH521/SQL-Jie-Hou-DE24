@@ -1,4 +1,8 @@
-DROP table database.sql ;
+-- DDL
+
+-- 删除表
+DROP table database.sql;
+
 
 -- 删除schema， 如果里面有东西，会提示错误。
 DROP schema programming; 
