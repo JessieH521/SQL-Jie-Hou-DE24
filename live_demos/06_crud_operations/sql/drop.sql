@@ -13,7 +13,7 @@ SELECT * from information_schema.tables;
 SELECT * from information_schema.schemata;
 
 
-
+ALTER TABLE table_name DROP COLUMN column_name;
 
 
 

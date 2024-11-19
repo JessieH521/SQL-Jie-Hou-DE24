@@ -1,7 +1,6 @@
 INSERT
 	into
-	database.sql (word,
-	description)
+	database.sql (word, description)
 values('query',
 'A request for data or information from a database.');
 

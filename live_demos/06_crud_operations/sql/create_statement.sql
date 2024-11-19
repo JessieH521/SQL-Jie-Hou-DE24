@@ -1,10 +1,23 @@
+-- DDL Definition Language
+
 -- 建一个 schema 叫 database 
+/*
+ *如果数据库中已经存在一个名为 programming 的 Schema：
+
+这条语句会直接跳过，不会创建新的 Schema，也不会抛出错误。
+它不会更改已有 Schema 的内容或结构（也就是说，不会编辑或修改这个 Schema）。
+如果数据库中没有名为 programming 的 Schema：
+
+它会创建一个新的 programming Schema。
+ */
+
 CREATE schema if not exists database;
 
 CREATE schema if not exists programming;
 
 -- 查询所有 schema 信息
 SELECT * from information_schema.schemata;
+
 
 -- 创建一个名为 id_sql_sequence 的序列，序列的起始值为 1，2，3......自动递增的序列。
 
