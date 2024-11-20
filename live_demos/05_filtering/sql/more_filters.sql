@@ -15,6 +15,7 @@ where
 	company_size not in ('M', 'S');
 
 -- filter clause
+
 SELECT
 	COUNT(*) as total_jobs,
 	count(*) filter(WHERE remote_ratio = 100) as remote_jobs,
