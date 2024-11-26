@@ -16,11 +16,12 @@ FROM
 	staging.sql_glossary;
 
 
+
 -- regexp_matches()
 -- 是用来进行正则表达式匹配的函数，返回一个布尔值（是否匹配）。
 -- 'select\b': 正则表达式模式，表示查找完整的单词 select。其中：select 表示单词。
--- \b 是正则表达式中的“单词边界”，确保匹配的 select 是一个完整的单词，而不是部分单词（例如 selection就不可以）。
-
+-- \b 是正则表达式中的“单词右边界”，确保匹配的 select 是一个完整的单词，而不是部分单词（例如 selection就不可以， abcselect可以）。
+-- '\bselect\b' 两边边界都有 独立的这个词
 SELECT
 	*
 FROM

@@ -6,6 +6,14 @@ from
 	interval '1 day') as t(november);
 
 
+SELECT
+	*
+from
+	generate_series(date '2024-11-01',
+	date '2024-11-30',
+	interval 1 day) as t(november);
+
+
 -- data dimension 数据维度
 
 -- strftime(data_series,'%Y-%m-%d') 取其中日期部分的函数 年月日

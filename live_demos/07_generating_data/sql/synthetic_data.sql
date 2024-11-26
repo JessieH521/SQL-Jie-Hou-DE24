@@ -4,15 +4,22 @@
 -- concatenate 连接 合成
 -- dice simulation  模拟骰子
 
+
 -- generate_series(1, 100) :生成从1到100的序列， 包含1，100.  
 
 SELECT generate_series(1, 100) as id;   -- 没展开
 
 SELECT unnest(generate_series(1, 100)) as id;  -- 展开了
 
--- random() 从【0，1）的浮点数
 
-SELECT random();
+-- random() 从【0，1）的浮点数  random function
+
+SELECT random(); 
+
+SELECT * from generate_series(10);  -- 0-10
+
+SELECT FLOOR(random() * 6) + 1 as dices from generate_series(10);
+
 
 -- between 1 and 6, floor() 向下取整; random() * 6 -> [0,6)的小数
 -- [1,6] 之间的整数
