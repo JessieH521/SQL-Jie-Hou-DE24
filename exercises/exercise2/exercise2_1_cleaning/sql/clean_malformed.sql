@@ -56,4 +56,3 @@ SELECT * from refined.sql_glossary WHERE LOWER(example) LIKE '%column1%';
 
 
 
-
