@@ -4,6 +4,7 @@
 desc;
 -- name 是 table/view 的名称
 
+
 -- film table
 
 SELECT * FROM main.film;
@@ -20,26 +21,35 @@ FROM
 
 SELECT * FROM main.film;
 
+
+-- 能看的等级， 比如 nc-17 17以上家长陪同
+
 SELECT DISTINCT rating from main.film;
 
 
--- film_actor 表
+-- film_actor 表: actor_id ans film_id
 
 SELECT * FROM main.film_actor;
 
 desc table main.film_actor;
 
--- actor
+
+-- actor: actor_id
 
 SELECT * FROM main.actor;
 
--- category
+
+-- category: category_id
 
 SELECT * FROM main.category;
 
+-- film_category: film_id category_id
 SELECT * FROM main.film_category;
 
+
 -- customer
+
+SELECT * FROM main.customer c ;
 
 SELECT
 	'customer' as type,
@@ -50,11 +60,19 @@ FROM
 WHERE
 	c.first_name LIKE 'D%';
 
+SELECT * FROM main.store s ;
+
+SELECT
+	store_id,
+	COUNT(*) as number_customer
+from
+	main.customer c
+group by
+	store_id 
+ORDER BY  store_id ASC;
 
 
-
-
-
+-- more EDAs 
 
 
 

@@ -1,3 +1,8 @@
+-- want to combine customers and actors into one table
+
+SELECT * FROM main.customer c ;
+SELECT * FROM main.actor a ;
+
 -- union
 
 SELECT
@@ -20,6 +25,8 @@ WHERE a.first_name LIKE 'A%';
 
 -- intersect 交集
 
+-- customer and actor same name
+
 SELECT
 	c.first_name,
 	c.last_name
@@ -33,7 +40,7 @@ FROM
 	main.actor a ;
 
 
--- union all 并集 不去重 5 rows
+-- union all 并集 不去重 5 rows JENNIFER	DAVIS 出现2次
 
 SELECT
 	c.first_name,
