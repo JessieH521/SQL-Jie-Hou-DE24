@@ -1,9 +1,19 @@
+DESC;
+
+SELECT  ALL COLUMN FROM main.actor a ;
+SELECT COLUMNS FROM main.category c ;
+
+-- film_id, title
 SELECT * FROM main.film f ;
+
+-- film_id, actor_id
 SELECT * FROM main.film_actor fa ;
+
+-- actor_id, first_name, last_name
 SELECT * FROM main.actor a ;
 
 
--- which actor play which film_id ?
+-- Q: which actor play which film_id ?
 
 SELECT
 	a.first_name,
@@ -15,12 +25,12 @@ left join main.film_actor fa on
 	a.actor_id = fa.actor_id ;
 
 
--- which actor play which film title ? 2次 join
+-- Q: which actor play which film title ? 2次 join
 
 SELECT
 	a.first_name,
 	a.last_name,
-	f.title 
+	f.title AS film_title
 FROM
 	main.actor a
 left join main.film_actor fa on

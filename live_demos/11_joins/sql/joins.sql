@@ -5,6 +5,8 @@ SELECT * FROM main.plant_care pc ;
 
 
 -- left join
+-- gets all from left table, with or without match in right table
+-- without match -> nulls on rigth column
 
 SELECT
 	*
@@ -44,8 +46,8 @@ main.plant_care pc on
 	p.plant_id = pc.plant_id ;
 
 
--- inner join 
-
+-- inner join  == join  默认
+-- gets same values on the join condition, intersecction, must exist in both tables
 
 SELECT
 	p.plant_id,
@@ -61,6 +63,7 @@ main.plant_care pc on
 
 
 -- full join
+-- gets everything from bith tables, nulls where there is no match
 
 SELECT
 	p.plant_id,

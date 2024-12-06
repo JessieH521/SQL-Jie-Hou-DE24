@@ -1,6 +1,7 @@
 
 -- create plants dataset 
 
+
 CREATE TABLE IF NOT EXISTS main.plants (
 	plant_id INTEGER PRIMARY KEY,
 	plant_name TEXT UNIQUE,
@@ -29,3 +30,28 @@ VALUES
 	(2, 3, 'Weekly', 'Partial Sun'),
 	(3, 4, 'Biweekly', 'Full Sun'),
 	(4, 6, 'Daily', 'Shade');
+	
+
+
+SELECT * FROM main.plants p ;
+
+SELECT * FROM main.plant_care pc ;
+
+DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
