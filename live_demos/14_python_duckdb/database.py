@@ -1,15 +1,18 @@
+
 import duckdb
 from pathlib import Path
 
 from constants import DATABASE_PATH
 
 # Context Manager 上下文管理器 with
+# Database class with connection implemented as context manager 
 
 # 创建了一个路径变量 db_path，用于指定 DuckDB 数据库文件的位置。如果 test.db 文件不存在，DuckDB 会自动创建一个新文件。
 # Path(__file__): 当前脚本的文件路径。.parent: 获取脚本所在文件夹的路径。/"test.db": 代表一个名为 test.db 的 DuckDB 数据库文件。
 # db_path = Path(__file__).parent/"test.db"
 
 # 创建类，封装了与 DuckDB 数据库交互的功能，利用上下文管理协议 (__enter__ 和 __exit__) 实现自动资源管理
+
 class Database:
 
     def __init__(self, db_path):
@@ -42,6 +45,8 @@ if __name__ == "__main__":      # Database 是类，db 是 Database 类创建的
 
 
 
+
+
 # 上下文管理器 (Context Manager) 
 
 """
@@ -59,9 +64,6 @@ __exit__:在 with 块结束时（无论是否发生异常）被调用，清理�
 """
 
 
-
-
-
 """
 Database 类定义了 __enter__ 和 __exit__ 方法：
 这两个方法使 Database 类成为一个上下文管理器(Context Manager)。
@@ -70,6 +72,10 @@ with 语句会调用这些方法来管理进入和退出上下文。
 __enter__: 当执行 with Database() as db: 时, __enter__ 方法会自动执行。
 __exit__: 当 with 代码块运行完毕（无论是否抛出异常, __exit__ 方法会自动执行。
 """
+
+
+
+
 
 # class Database:
 
@@ -87,6 +93,10 @@ __exit__: 当 with 代码块运行完毕（无论是否抛出异常, __exit__ �
 
 # print("outside")
 # print('----------------------')
+
+
+
+
 
 # entering __enter__
 # inside of context manager
