@@ -149,7 +149,7 @@ JOIN main.film f on
 -- i) Make a more extensive EDA of your choice on the Sakila database.
 
 
-
+select * from information_schema.tables;
 
 
 
