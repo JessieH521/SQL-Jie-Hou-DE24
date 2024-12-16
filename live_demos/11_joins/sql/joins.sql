@@ -29,9 +29,24 @@ left join
 main.plant_care pc on
 	p.plant_id = pc.plant_id ;
 
+SELECT
+	*
+FROM
+	main.plant_care pc 
+left join 
+main.plants p on
+	p.plant_id = pc.plant_id ;
 
 
 -- right join
+
+SELECT
+	*
+FROM
+	main.plants p
+right join 
+main.plant_care pc on
+	p.plant_id = pc.plant_id ;
 
 SELECT
 	p.plant_id,
@@ -63,7 +78,7 @@ main.plant_care pc on
 
 
 -- full join
--- gets everything from bith tables, nulls where there is no match
+-- gets everything from both tables, nulls where there is no match
 
 SELECT
 	p.plant_id,

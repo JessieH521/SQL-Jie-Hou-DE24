@@ -9,7 +9,7 @@
 
 SELECT * from main.food f ;
 
--- SUBSTRING(week, 1, 4) 从列 week 的各值中，提取从第 1 个字符开始的 4 个字符 = week[:4]
+-- SUBSTRING(week, 1, 4) 从列 week 列的各值中，提取从第 1 个字符开始的 4 个字符 = week[:4]
 
 CREATE table if not exists cleaned_food as(
 SELECT

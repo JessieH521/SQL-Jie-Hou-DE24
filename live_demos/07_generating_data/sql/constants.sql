@@ -21,7 +21,7 @@ values
 desc;
 
 
--- t 是表名， id, name 是列名 column
+-- t 是临时表别名（就是从句中3行值的临时表）， id, name 是列名 column
 
 
 

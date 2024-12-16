@@ -20,7 +20,8 @@ SELECT
 	a.last_name
 FROM
 	main.actor a 
-WHERE a.first_name LIKE 'A%';
+WHERE 
+	a.first_name LIKE 'A%';
 
 
 -- intersect 交集

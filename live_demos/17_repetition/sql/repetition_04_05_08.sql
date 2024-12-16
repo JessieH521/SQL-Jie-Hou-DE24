@@ -1,13 +1,29 @@
 desc;
 
+-- wildcard selection/ select star/ select all
+-- return a result set of all columns and their respective rows
+-- from the table/view: main.payment
+-- when using main.payment we mean schema.table_name/view_name -> namespacing
+
+-- limits the number
 SELECT * FROM main.payment p limit 10;
 
+-- without specifying the schema, duckdb will look at main schema by default
+
+-- fully qualified name 
+SELECT * FROM sakila.main.payment p ;
+
+
+-- chooses which columns to return 
 SELECT
 	customer_id,
 	amount
 from
 	main.payment p ;
 
+
+-- exclude
+SELECT * exclude(customer_id, amount) FROM main.payment p ;
 
 -- aggregate function 'count' --> many_to_one mapping, 聚合函数 count --> 多对一映射
 
@@ -27,6 +43,8 @@ FROM
 	main.payment p ;
 
 -- filter 筛选
+-- where filters the rows with a condition
+-- if the condition is fulfilled - the row will be in the result set
 
 SELECT
 	*
@@ -39,6 +57,7 @@ ORDER BY
 LIMIT  15;
 
 -- case when ...  like if else
+-- create a new column with amount classifications 
 
 SELECT
 	amount,
@@ -61,8 +80,9 @@ SELECT
 FROM
 	main.payment p ;
 
+-- view
 
-CREATE VIEW  IF NOT EXISTS main.payment_level as (
+CREATE VIEW IF NOT EXISTS main.payment_level as (
 	SELECT
 	*,
 	CASE 
@@ -78,7 +98,8 @@ SELECT * FROM main.payment_level;
 
 SELECT
 	cost_level,
-	COUNT(amount)  as number_per_level
+	COUNT(amount)  as number_per_level,
+	round(AVG(amount), 2) AS mean_amount 
 FROM
 	main.payment_level
 group by

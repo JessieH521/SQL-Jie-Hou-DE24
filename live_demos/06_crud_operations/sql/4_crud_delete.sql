@@ -12,7 +12,7 @@ SELECT
 from
 	programming.python
 where
-	id = 2;
+	id = 3;
 
 
 DELETE
@@ -20,6 +20,8 @@ FROM
 	programming.python
 WHERE
 	id = 2;
+
+SELECT * FROM programming.python;
 
 
 SELECT * from database.duckdb d ;

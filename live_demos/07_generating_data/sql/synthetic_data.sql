@@ -25,7 +25,7 @@ SELECT FLOOR(random() * 6) + 1 as dices from generate_series(10);
 -- [1,6] 之间的整数
 
 -- run 100 times, 随机生成1到6的数字100次
-SELECT FLOOR(random() * 6 + 1) as dice from generate_series(1, 100);   
+SELECT FLOOR(random() * 6) + 1 as dice from generate_series(1, 100);   
 
 -- student synthetic
 -- string operations 'student_'|| id, 两个合成一起

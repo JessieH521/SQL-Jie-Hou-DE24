@@ -59,18 +59,24 @@ SELECT * FROM sql.lectures l ;
 
 
 -- studied week 4 and 6
-
 SELECT * FROM sql.lectures WHERE study_week in (4,6);
 
+-- want to update week 4, 6
 UPDATE sql.lectures SET studied = TRUE WHERE study_week in (4, 6);
 
 -- search with strings
+-- matches strings case sensitive
 
 SELECT * FROM sql.lectures WHERE content LIKE '%string%';
+
+-- make match insensitive
+SELECT * FROM sql.lectures WHERE LOWER(content) LIKE '%string%';
+SELECT * FROM sql.lectures WHERE content ILIKE '%string%';
 
 SELECT * FROM sql.lectures WHERE content LIKE '%python%';
 SELECT * FROM sql.lectures WHERE lower(content) LIKE '%python%';
 
+-- join lectures and exercises
 
 SELECT
 	*
@@ -98,6 +104,11 @@ FROM
 inner join sql.exercises e on
 	l.study_week = e.study_week ;
 
-
+SELECT
+	*
+FROM
+	sql.lectures l
+RIGHT join sql.exercises e on
+	l.study_week = e.study_week ;
 
 

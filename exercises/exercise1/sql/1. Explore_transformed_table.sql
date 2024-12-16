@@ -54,7 +54,7 @@ SELECT
 	COUNT(*) filter(WHERE remote_ratio = 100) as remote_jobs,
 	round(office_jobs/total_jobs * 100, 2) as percentage_office_jobs,
 	round(half_jobs/total_jobs * 100, 2) as percentage_half_jobs,
-	round(remote_jobs/total_jobs * 100, 2) as percentage_remote_jobs,
+	round(remote_jobs/total_jobs * 100, 2) as percentage_remote_jobs
 FROM
 	main.filter_salaries;
 

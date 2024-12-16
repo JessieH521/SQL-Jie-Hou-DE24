@@ -1,6 +1,6 @@
 DESC;
 
-SELECT  ALL COLUMN FROM main.actor a ;
+SELECT ALL COLUMN FROM main.actor a ;
 SELECT COLUMNS FROM main.category c ;
 
 -- film_id, title
